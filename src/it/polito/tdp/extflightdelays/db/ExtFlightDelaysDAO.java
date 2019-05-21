@@ -54,6 +54,7 @@ public class ExtFlightDelaysDAO {
 					Airport airport = new Airport(rs.getInt("ID"), rs.getString("IATA_CODE"), rs.getString("AIRPORT"),
 							rs.getString("CITY"), rs.getString("STATE"), rs.getString("COUNTRY"), rs.getDouble("LATITUDE"),
 							rs.getDouble("LONGITUDE"), rs.getDouble("TIMEZONE_OFFSET"));
+					idMapAirport.put(airport.getId(), airport);
 					result.add(airport);
 					
 				} else {
